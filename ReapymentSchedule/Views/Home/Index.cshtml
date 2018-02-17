@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Calculate", "Schedule", FormMethod.Post))
+{ 
+
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <input type="number" name="Amount" min="1000"/>
+                <input type="number" name="Instalment" min="1" />
+                <input type="submit" value="Calculate" />
+
+                       </div>
+   
+        </div>
+
+}
