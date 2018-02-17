@@ -1,0 +1,2 @@
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule.Tests\obj\Debug\ReapymentSchedule.Tests.csprojResolveAssemblyReference.cache
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule.Tests\obj\Debug\ReapymentSchedule.Tests.csproj.CoreCompileInputs.cache

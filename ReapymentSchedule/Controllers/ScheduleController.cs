@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReapymentSchedule.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,9 @@ namespace ReapymentSchedule.Controllers
         }
 
         [HttpPost]
-        public ActionResult Calculate(decimal Amount, decimal Instalment)
+        public ActionResult Calculate(InputData data)
         {
-            ViewBag.Tilte = Amount.ToString() + Instalment.ToString();
+           // ViewBag.Tilte = Amount.ToString() + Instalment.ToString();
             return View();
         }
     }

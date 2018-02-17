@@ -1,20 +1,76 @@
-﻿@{
+﻿@using ReapymentSchedule.Models;
+@model InputData
+
+@{
     ViewBag.Title = "Home Page";
 }
 
+<div class="form-group">
+
 @using (Html.BeginForm("Calculate", "Schedule", FormMethod.Post))
-{ 
+{
 
-
-
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    @Html.DropDownListFor(m => m.Type,
+                            new SelectList(Enum.GetValues(typeof(TypeOfLoan.LoanType))),
+                            "Select type of loan", new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Type, string.Empty, new { @class = "text-danger" })
+    <div class="col-md-12">
         <div class="row">
-            <div class="col-md-4">
-                <input type="number" name="Amount" min="1000"/>
-                <input type="number" name="Instalment" min="1" />
-                <input type="submit" value="Calculate" />
+            <div class="col-lg-3 col-md-6">
+                @Html.Label("Amount of loan")
+                @Html.EditorFor(m => m.Amount, new { htmlAttributes = new { @type = "number", @min = "1000", @step = "1000", @value = "1000" } })
+            </div>
+            <div class="col-lg-3 col-md-6">
+                @Html.Label("Period")
+                @Html.EditorFor(m => m.Instalment, new { htmlAttributes = new { @type = "number", @min = "1", @step = "1", @value = "1" } })
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                @Html.DropDownListFor(m => m.Type,
+                            new SelectList(Enum.GetValues(typeof(TypeOfPeriod.Period))),
+                            "Select type of period", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PeriodType, string.Empty, new { @class = "text-danger" })
+            </div>
+           
 
-                       </div>
-   
-        </div>
+
+                <div style="text-align:center;">
+                    <input type="submit" name="btCalculate" value="Calculate" />
+                </div>
+            
+            </div>
+
+    </div>
+
+
+
 
 }
+    </div>
+
+
+
+@*<div class="form-group">
+    @using (Html.BeginForm("TryConvert", "Convert", FormMethod.Post))
+    {
+
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+        @Html.DropDownListFor(m => m.ExpectedType,
+                            new SelectList(Enum.GetValues(typeof(TypeConverter.TypeConverters))),
+                            "Select expected type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ExpectedType, string.Empty, new { @class = "text-danger" })
+
+
+        @Html.EditorFor(model => model.MyText, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.MyText, string.Empty, new { @class = "text-danger" })
+
+
+        <input type="submit" name="Upload" value="Try Convert" />
+
+    }
+</div>*@
+
+
