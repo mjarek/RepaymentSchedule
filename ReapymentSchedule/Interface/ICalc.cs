@@ -9,6 +9,6 @@ namespace ReapymentSchedule.Interface
 {
     public interface ICalc
     {
-        List<RepaymentScheduleDetail> Calc(InputData data);
+        List<RepaymentScheduleDetail> Calc(InputData data, IProduct product);
     }
 }

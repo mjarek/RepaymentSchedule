@@ -20,6 +20,7 @@ namespace ReapymentSchedule.Models
         //[DataType(DataType.MultilineText)]
         public decimal Amount { get; set; }
         public decimal Period { get; set; }
+        public int NumberOfInstalments { get; set; }
       
 
     }

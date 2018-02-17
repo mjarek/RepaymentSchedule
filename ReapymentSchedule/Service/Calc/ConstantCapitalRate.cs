@@ -9,32 +9,27 @@ namespace ReapymentSchedule.Calc
 {
     public class ConstantCapitalInstalment : ICalc
     {
-        //Interest z productu
-        //period
-
         public List<RepaymentScheduleDetail> list = new List<RepaymentScheduleDetail>();
 
-        public List<RepaymentScheduleDetail> Calc(InputData data)
+        public List<RepaymentScheduleDetail> Calc(InputData data,IProduct product)
         {
-            var period = 12;
+            
 
-            var CapitalInstalment = Math.Round(data.Amount / period, 2,MidpointRounding.ToEven);
-            var LastCapitalInstalment = data.Amount - (CapitalInstalment * (period - 1));
+            var CapitalInstalment = Math.Round(data.Amount / data.NumberOfInstalments, 2,MidpointRounding.ToEven);
+            var LastCapitalInstalment = data.Amount - (CapitalInstalment * (data.NumberOfInstalments - 1));
             decimal counter = data.Amount;
             int counterPeriod = 1;
 
 
             while (counter > 0)
             {
-
-
                 RepaymentScheduleDetail detail = new RepaymentScheduleDetail
                 {
                     Capital = CapitalInstalment,
                     Id = counterPeriod,
-                    Interest = Math.Round((counter * 0.035m) / 12, 2, MidpointRounding.ToEven),
+                    Interest = Math.Round((counter * product.Interest) / data.NumberOfInstalments, 2, MidpointRounding.ToEven),
                     RemainingCapital = counter
-            };
+                };
                 
 
                 if (counter == LastCapitalInstalment)
@@ -52,18 +47,6 @@ namespace ReapymentSchedule.Calc
             }
 
             return list;
-        }
-
-        
-
-        private RepaymentScheduleDetail CalculateSchema(RepaymentScheduleDetail detail)
-        {
-            return detail = new RepaymentScheduleDetail
-            {
-                Capital = detail.Capital,
-                Id = detail.Id,
-                //Interest = 
-            };
         }
     }
 }

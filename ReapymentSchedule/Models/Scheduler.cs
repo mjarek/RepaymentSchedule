@@ -21,11 +21,8 @@ namespace ReapymentSchedule.Models
 
         private void CreateRepaymentSchedule()
         {
-            var scheduleDetail = new SortedList<int, RepaymentScheduleDetail>();
-            var numberOfInstalment=CalculateNumberOfInstalment();
-
-
-            repaymentSchedule =  managerData.Calculator.Calc(inputData);
+           inputData.NumberOfInstalments = CalculateNumberOfInstalment();
+           repaymentSchedule =  managerData.Calculator.Calc(inputData,managerData.Product);
         }
 
         public List<RepaymentScheduleDetail> GetRepaymentSchedule()

@@ -182,3 +182,4 @@ E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Container
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Mvc.dll
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\WebActivatorEx.dll
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Mvc.xml
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\obj\Debug\ReapymentSchedule.csprojResolveAssemblyReference.cache
