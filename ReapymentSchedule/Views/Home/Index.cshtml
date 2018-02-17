@@ -24,13 +24,19 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 @Html.Label("Period")
-                @Html.EditorFor(m => m.Instalment, new { htmlAttributes = new { @type = "number", @min = "1", @step = "1", @value = "1" } })
+                @Html.EditorFor(m => m.Period, new { htmlAttributes = new { @type = "number", @min = "1", @step = "1", @value = "1" } })
             </div>
             
             <div class="col-lg-3 col-md-6">
                 @Html.DropDownListFor(m => m.Type,
                             new SelectList(Enum.GetValues(typeof(TypeOfPeriod.Period))),
                             "Select type of period", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PeriodType, string.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-3 col-md-6">
+                @Html.DropDownListFor(m => m.Type,
+                            new SelectList(Enum.GetValues(typeof(TypeOfInstallment.InstalmentType))),
+                            "Select type of installment", new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.PeriodType, string.Empty, new { @class = "text-danger" })
             </div>
            
@@ -51,26 +57,5 @@
     </div>
 
 
-
-@*<div class="form-group">
-    @using (Html.BeginForm("TryConvert", "Convert", FormMethod.Post))
-    {
-
-        @Html.ValidationSummary(true)
-        @Html.AntiForgeryToken()
-        @Html.DropDownListFor(m => m.ExpectedType,
-                            new SelectList(Enum.GetValues(typeof(TypeConverter.TypeConverters))),
-                            "Select expected type", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.ExpectedType, string.Empty, new { @class = "text-danger" })
-
-
-        @Html.EditorFor(model => model.MyText, new { htmlAttributes = new { @class = "form-control" } })
-        @Html.ValidationMessageFor(model => model.MyText, string.Empty, new { @class = "text-danger" })
-
-
-        <input type="submit" name="Upload" value="Try Convert" />
-
-    }
-</div>*@
 
 

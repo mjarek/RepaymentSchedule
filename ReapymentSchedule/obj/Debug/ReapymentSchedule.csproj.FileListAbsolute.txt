@@ -174,7 +174,11 @@ E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Microsoft.AI.De
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Microsoft.AI.WindowsServer.xml
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Microsoft.AI.Web.xml
-E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\obj\Debug\ReapymentSchedule.csprojResolveAssemblyReference.cache
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\obj\Debug\ReapymentSchedule.csproj.CoreCompileInputs.cache
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\obj\Debug\ReapymentSchedule.dll
 E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\obj\Debug\ReapymentSchedule.pdb
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Abstractions.dll
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Container.dll
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Mvc.dll
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\WebActivatorEx.dll
+E:\Repozytorium\Banqsoft\RepaymentSchedule\ReapymentSchedule\bin\Unity.Mvc.xml

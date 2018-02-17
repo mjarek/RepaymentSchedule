@@ -12,9 +12,9 @@ namespace ReapymentSchedule.Models
 
             public enum LoanType
             {
-                 Housing,
-                 Car,
-                 Spending
+                 HousingLoan,
+                 CarLoan
+                
             }
 
 

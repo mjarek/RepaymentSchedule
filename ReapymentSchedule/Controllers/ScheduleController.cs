@@ -1,4 +1,5 @@
-﻿using ReapymentSchedule.Models;
+﻿using ReapymentSchedule.Interface;
+using ReapymentSchedule.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace ReapymentSchedule.Controllers
 {
     public class ScheduleController : Controller
     {
+        private readonly IManager _manager;
+        public ScheduleController(IManager manager)
+        {
+            _manager = manager;
+        }
         // GET: Schedule
         public ActionResult Index()
         {
@@ -16,10 +22,18 @@ namespace ReapymentSchedule.Controllers
         }
 
         [HttpPost]
-        public ActionResult Calculate(InputData data)
+        public ActionResult Calculate(InputData inputData)
         {
-           // ViewBag.Tilte = Amount.ToString() + Instalment.ToString();
-            return View();
+            // ViewBag.Tilte = Amount.ToString() + Instalment.ToString();
+            var managerData = new ManagerData
+            {
+                Product = _manager.CreateProduct(inputData),
+                Calculator = _manager.CreateCalculator(inputData)
+            };
+          
+           return View(new Scheduler(managerData, inputData));
         }
     }
+
+   
 }

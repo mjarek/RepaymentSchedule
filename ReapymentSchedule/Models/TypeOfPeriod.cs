@@ -10,7 +10,8 @@ namespace ReapymentSchedule.Models
 
         public enum Period
         {
-           Yearly
+           Year,
+           Month
         }
 
     }
