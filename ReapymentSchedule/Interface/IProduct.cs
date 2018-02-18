@@ -10,6 +10,6 @@ namespace ReapymentSchedule.Interface
     {
 
          decimal Interest { get; }
-         ICalc Calc { get; }
+       
     }
 }

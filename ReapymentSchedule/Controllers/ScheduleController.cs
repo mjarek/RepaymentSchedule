@@ -24,7 +24,6 @@ namespace ReapymentSchedule.Controllers
         [HttpPost]
         public ActionResult Calculate(InputData inputData)
         {
-            // ViewBag.Tilte = Amount.ToString() + Instalment.ToString();
             var managerData = new ManagerData
             {
                 Product = _manager.CreateProduct(inputData),

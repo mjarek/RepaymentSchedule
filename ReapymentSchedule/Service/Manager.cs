@@ -47,7 +47,7 @@ namespace ReapymentSchedule.Models
         {
             Type calc = GetTypeToCreate(data.InstallmentType.ToString(), _calculators);
 
-            return Activator.CreateInstance(calc) as ICalc;
+            return Activator.CreateInstance(calc,data) as ICalc;
         }
 
         private Type GetTypeToCreate(string searchName,Dictionary<string,Type> searchIn)

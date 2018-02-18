@@ -11,7 +11,7 @@ namespace ReapymentSchedule.Product
     {
         public decimal Interest => 0.025m;
 
-        public ICalc Calc => new ConstantCapitalInstalment();
+       
     }
 }
     
